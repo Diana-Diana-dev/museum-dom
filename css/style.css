@@ -304,7 +304,7 @@ a {
 }
 
 /* Активная точка */
-.welcome__sliders .slick-dots li .slick-active button {
+.welcome__sliders .slick-dots li.slick-active button {
   width: 16px;
   height: 16px;
   background: #D2B183;
@@ -1296,4 +1296,848 @@ a {
 .footer-small_copyright:hover {
   color: #9D8665;
   transition: 0.5s;
+}
+
+.popap {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 200;
+}
+
+.popap:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popap__area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.form-booking-wrapper {
+  position: relative;
+  background: var(--color-white, white);
+  max-width: 1440px;
+  max-height: 845px;
+  margin: auto auto;
+  display: flex;
+}
+
+.form-booking {
+  display: flex;
+  margin: 91px auto;
+}
+
+.close-button {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  border: none;
+  background: var(--color-white, white);
+}
+
+.booking-info-fieldset {
+  border: none;
+  margin-right: 40px;
+}
+
+.booking-title {
+  font-family: Forum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 55px;
+  text-transform: uppercase;
+  color: #9D8665;
+  margin-bottom: 15px;
+}
+
+.booking__subtitle {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #710707;
+  display: block;
+  margin-bottom: 63px;
+}
+
+.booking__subtitle::after {
+  content: "";
+  display: block;
+  background: #740C11;
+  opacity: 0.9;
+  height: 3px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.booking__input {
+  background: #FFFFFF;
+  border: 1px solid #030303;
+  box-sizing: border-box;
+  padding-left: 43px;
+}
+
+.date-time {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.booking-date {
+  width: 190px;
+  height: 45px;
+  margin-right: 20px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  color: #030303;
+  background-image: url(../assets/svg/date.svg);
+  background-size: 15px 15px;
+  background-position: 15px 15px;
+  background-repeat: no-repeat;
+}
+
+.booking-date::-webkit-datetime-edit {
+  opacity: 0;
+}
+
+.booking-date::before {
+  content: "Date";
+}
+
+::-webkit-calendar-picker-indicator {
+  background-image: url(../assets/svg/arrow.svg);
+  background-size: 17px 17px;
+  background-position: center;
+}
+
+.booking-time {
+  width: 190px;
+  height: 45px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  color: #030303;
+  background-image: url(../assets/svg/time.svg);
+  background-size: 15px 15px;
+  background-position: 15px 15px;
+  background-repeat: no-repeat;
+}
+
+.booking-time::-webkit-datetime-edit {
+  opacity: 0;
+}
+
+.booking-time::before {
+  content: "Time";
+}
+
+.buyer-name {
+  width: 400px;
+  height: 45px;
+  margin-bottom: 20px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  color: #030303;
+  background-image: url(../assets/svg/name.svg);
+  background-size: 13px 15px;
+  background-position: 15px 15px;
+  background-repeat: no-repeat;
+}
+
+.buyer-email {
+  width: 400px;
+  height: 45px;
+  margin-bottom: 20px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  color: #030303;
+  background-image: url(../assets/svg/email.svg);
+  background-size: 15px 11px;
+  background-position: 15px 17px;
+  background-repeat: no-repeat;
+}
+
+.buyer-phone {
+  width: 400px;
+  height: 45px;
+  margin-bottom: 20px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  color: #030303;
+  background-image: url(../assets/svg/tel.svg);
+  background-size: 14px 23px;
+  background-position: 15px 11px;
+  background-repeat: no-repeat;
+}
+
+.booking-ticket-type {
+  width: 400px;
+  height: 45px;
+  margin-bottom: 20px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  color: #030303;
+  background-image: url(../assets/svg/ticket_type.svg);
+  background-size: 15px 15px;
+  background-position: 15px 15px;
+  background-repeat: no-repeat;
+}
+
+.entry-ticket {
+  width: 400px;
+  height: 135px;
+  background: #FFFFFF;
+  border: 1px solid #030303;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.entry-ticket-title {
+  font-family: Forum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: capitalize;
+  color: #9D8665;
+  margin: 10px 0 20px 15px;
+}
+
+.entry-ticket-title::after {
+  content: "";
+  display: block;
+  background: #740C11;
+  opacity: 0.9;
+  height: 2px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+.booking__amount-selector {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px 15px 15px;
+}
+
+.padding-bottom-18px {
+  padding-bottom: 18px;
+}
+
+.booking__number-selector-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #030303;
+}
+
+.number-selector {
+  border: 1px solid #030303;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-minus {
+  width: 35px;
+  height: 25px;
+  color: #FFFFFF;
+  background: #000000;
+  margin: 0 auto;
+  border: none;
+}
+
+.button-plus {
+  width: 35px;
+  height: 25px;
+  color: #FFFFFF;
+  background: #000000;
+  margin: 0 auto;
+  border: none;
+}
+
+.button-number {
+  width: 35px;
+  height: 25px;
+  color: #000000;
+  background: #FFFFFF;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  border: none;
+}
+
+.booking-overview-fieldset {
+  border: 1px solid #030303;
+  box-sizing: border-box;
+  padding: 25px 30px;
+  width: 530px;
+}
+
+.overview-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.overview-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 37px;
+  color: #272727;
+  margin-bottom: 2px;
+}
+
+.overview-subtitle {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  color: #740C11;
+  opacity: 0.9;
+  margin-bottom: 10px;
+}
+
+.overview-date {
+  position: relative;
+  margin-bottom: 5px;
+  padding-left: 30px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: #030303;
+}
+
+.overview-date::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 2px;
+  width: 15px;
+  height: 15px;
+  background-image: url(../assets/svg/date.svg);
+  background-size: 15px 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 15px;
+}
+
+.overview-time {
+  position: relative;
+  margin-bottom: 5px;
+  padding-left: 30px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: #030303;
+}
+
+.overview-time::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 2px;
+  width: 15px;
+  height: 15px;
+  background-image: url(../assets/svg/time.svg);
+  background-size: 15px 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.overview-ticket-type {
+  position: relative;
+  margin-bottom: 22px;
+  padding-left: 30px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: #030303;
+}
+
+.overview-ticket-type::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 2px;
+  width: 15px;
+  height: 15px;
+  background-image: url(../assets/svg/ticket_type.svg);
+  background-size: 15px 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.overview-image {
+  max-width: 150px;
+  max-height: 120px;
+}
+
+.sum-ticket-type {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sum-basic {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.quantity-basic {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 26px;
+  color: #030303;
+}
+
+.ticket-number {
+  width: 32px;
+  height: 20px;
+  background: #030303;
+  border-radius: 5px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #A4A4A3;
+  padding: 0 11px;
+  margin-right: 10px;
+}
+
+.total-basic {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 26px;
+  color: #030303;
+}
+
+.sum-senior {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.quantity-senior {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 26px;
+  color: #030303;
+}
+
+.booking-sum__underline {
+  border: 2px solid #740C11;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.sum-total {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.quantity-total {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 37px;
+  color: #030303;
+}
+
+.total-sum {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 37px;
+  color: #030303;
+}
+
+.user-card {
+  position: relative;
+}
+
+.card-front-side {
+  position: relative;
+  z-index: 2;
+  max-width: 360px;
+  max-height: 211px;
+  padding: 15px 20px 15px 20px;
+  background-color: #BCBCBC;
+  border-radius: 3px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #161615;
+}
+
+.card-front-side input::-webkit-outer-spin-button,
+.card-front-side input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+@media (max-width: 420px) {
+  .card-front-side {
+    font-size: 11px;
+    line-height: 13px;
+    width: 330px;
+  }
+}
+.card-front-side input {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+@media (max-width: 420px) {
+  .card-front-side input {
+    font-size: 13px;
+    line-height: 15px;
+  }
+}
+.card-front-side label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.card-front-side input {
+  border: 0.5px solid #A4A4A3;
+}
+
+.card-number-wrapper, .expiration-date-wrapper {
+  width: 215px;
+  margin-bottom: 10px;
+}
+
+.card-number-wrapper input {
+  width: 215px;
+  height: 35px;
+}
+
+.expiration-date-wrapper input {
+  width: 100px;
+  height: 35px;
+}
+
+.expiration-year {
+  margin-left: 15px;
+}
+
+.cardholder-wrapper {
+  width: 320px;
+}
+
+@media (max-width: 420px) {
+  .cardholder-wrapper {
+    width: 100%;
+  }
+}
+.cardholder-wrapper label {
+  margin-bottom: 4px;
+}
+
+@media (max-width: 420px) {
+  .cardholder-wrapper label {
+    margin-bottom: 6px;
+  }
+}
+.cardholder-wrapper input {
+  width: 320px;
+  height: 35px;
+}
+
+@media (max-width: 420px) {
+  .cardholder-wrapper input {
+    width: 100%;
+  }
+}
+.card-front-side input::-webkit-outer-spin-button,
+.card-front-side input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.date-selector {
+  display: inline-block;
+  width: 100px;
+}
+
+.date-selector, .year-selector {
+  position: relative;
+}
+
+.date-selector button {
+  border: none;
+  width: 28px;
+  height: 17px;
+  border-left: 0.5px solid #A4A4A3;
+  background-color: var(--bg-light);
+  cursor: pointer;
+}
+
+.date-selector .minus-button {
+  position: absolute;
+  right: 1px;
+  bottom: 1px;
+  width: 28px;
+  background-image: url(../svg/arrow-down.svg);
+  background-position: 10px 2px;
+  background-repeat: no-repeat;
+}
+
+.date-selector .plus-button {
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  width: 28px;
+  background-image: url(../svg/arrow-up.svg);
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+}
+
+.visa-logo {
+  position: absolute;
+  top: 34px;
+  right: 20px;
+  width: 55px;
+  height: 16px;
+  background-image: url(../assets/img/Visa.png);
+  background-repeat: no-repeat;
+}
+
+.mastercard-logo {
+  position: absolute;
+  top: 65px;
+  right: 20px;
+  width: 53px;
+  height: 32px;
+  background-image: url(../assets/img/mastercard.png);
+  background-repeat: no-repeat;
+}
+
+.card-back-side {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 360px;
+  height: 211px;
+  padding-top: 25px;
+  /* padding: 15px 20px 15px 20px; */
+  background-color: #939393;
+  border-radius: 3px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #161615;
+}
+
+@media (max-width: 420px) {
+  .card-back-side {
+    position: relative;
+    top: 24px;
+    width: 330px;
+    height: 209px;
+  }
+}
+.card-back-side input {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+@media (max-width: 420px) {
+  .card-back-side input {
+    font-size: 13px;
+    line-height: 15px;
+  }
+}
+.black-strip {
+  height: 45px;
+  background-color: #161615;
+}
+
+.card-back-side input::-webkit-outer-spin-button,
+.card-back-side input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.card-back-side label {
+  position: absolute;
+  top: 85px;
+  right: 35px;
+  display: block;
+}
+
+@media (max-width: 420px) {
+  .card-back-side label {
+    font-size: 13px;
+    line-height: 15px;
+    right: 30px;
+  }
+}
+.card-back-side input {
+  position: absolute;
+  top: 105px;
+  right: 20px;
+  display: block;
+  width: 75px;
+  height: 35px;
+  border: 0.5px solid #A4A4A3;
+}
+
+.back-side-info {
+  position: absolute;
+  top: 146px;
+  right: 33px;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+@media (max-width: 420px) {
+  .back-side-info {
+    font-size: 9px;
+    line-height: 11px;
+  }
+}
+.book-button {
+  /* align-self: flex-end; */
+  position: relative;
+  overflow: hidden;
+  /* right: 0; */
+  display: block;
+  margin-left: auto;
+  margin-top: 56px;
+  width: 220px;
+  height: 45px;
+  font-style: var(--font3-style);
+  font-weight: normal;
+  font-size: var(--font3-size);
+  line-height: var(--font3-line-height);
+  font-family: var(--font3-family);
+  color: var(--font-light);
+  line-height: 45px;
+  border: none;
+  background: #710707;
+  opacity: 0.9;
+  outline: none;
+  transition: background-color var(--hover-transition-time) var(--hover-timing-function), background 400ms;
+  /* border-color var(--hover-transition-time) var(--hover-timing-function); */
+}
+
+@media (max-width: 1024px) {
+  .book-button {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+@media (max-width: 768px) {
+  .book-button {
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
+@media (max-width: 420px) {
+  .book-button {
+    margin-top: 65px;
+  }
+}
+.book-button:hover,
+.book-button:focus-visible,
+.book-button:active {
+  background-color: var(--gold);
+  /* border-color: var(--gold); */
+  cursor: pointer;
+}
+
+.btn {
+  /* position: relative; */
+  /* overflow: hidden; */
+  /* transition: background 400ms; */
+}
+
+span.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 600ms linear;
+  background-color: white;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
 }
